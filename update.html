@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario de Actualización</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper@1.0.1/index.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/popper@1.0.1/resources/dashboard-results/dashboard-results.min.css" rel="stylesheet">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+    <!-- Agrega JavaScript para cargar datos actuales en el formulario -->
+    
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="text-center">
+        <h1 class="mb-4">Actualizar Datos</h1>
+      </div>
+
+      <form class="form" action="/vehicles/:id" method="post">
+        <!-- Agrega un campo oculto para almacenar el ID del vehículo -->
+        <input type="hidden" name="id" id="vehicleId" value="<%= vehicleId %>" />
+
+        <div class="form-group">
+          <label for="fecha_ingreso">Fecha de Ingreso:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="fecha_ingreso"
+            name="fecha_ingreso"
+            value="<%= vehicleData.fecha_ingreso %>"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="numero_serie">Número de Serie:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="numero_serie"
+            name="numero_serie"
+            value="<%= vehicleData.fecha_ingreso %>"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="placa_vehiculo">Placa del Vehículo:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="placa_vehiculo"
+            name="placa_vehiculo"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="foto_placa">Foto Placa:</label>
+          <input
+            type="file"
+            class="form-control"
+            id="foto_placa"
+            name="foto_placa"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="foto_contenedor">Foto Contenedor:</label>
+          <input
+            type="file"
+            class="form-control"
+            id="foto_contenedor"
+            name="foto_contenedor"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="foto_sello">Foto Sello:</label>
+          <input
+            type="file"
+            class="form-control"
+            id="foto_sello"
+            name="foto_sello"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="nombre_audit">Nombre del Auditor:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre_audit"
+            name="nombre_audit"
+          />
+        </div>
+
+        <!-- Add other fields as needed -->
+
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+      </form>
+    </div>
+
+    <!-- Add Bootstrap JS (Optional) -->
+    
+    
+  </body>
+</html>
